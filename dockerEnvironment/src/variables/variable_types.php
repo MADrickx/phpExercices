@@ -13,7 +13,11 @@
     foreach ($myFamily as $member) {
         echo("<p>this is my family member : $member"); 
     }
-
+    if ($amIangry == true){
+      echo("<p>J'ai faim!</p>");
+    } else {
+      echo("<p>Je n'ai pas faim!</p>");
+    };
     ?>
   </body>
 </html>
