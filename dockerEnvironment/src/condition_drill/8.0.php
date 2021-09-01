@@ -15,16 +15,29 @@
     </form>
 
     <?php
-
+    //I've done it with switch:case at first :B
     $points = $_GET['points'];
 
     switch ($points){
-        case ($points > 4) :
+        case ($points <= 4) :
             echo "This work is really bad. What a dumb kid!";
             break;
-            
+        case ($points > 4 AND $points < 10) :
+            echo "This is not sufficient. More studying is required.";
+            break;
+        case ($points == 10) :
+            echo "barely enough!";
+            break;
+        case ($points > 10 AND $points < 15) :
+            echo "Not bad!";
+            break;
+        case ($points >=15 AND $points < 19) :
+            echo "Bravo, bravissimo!";
+            break;
+        case ($points >=19) :
+            echo "Too good to be true : confront the cheater!";
+            break;
     }
-
     ?>
 </body>
 </html>

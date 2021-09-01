@@ -1,9 +1,10 @@
 <?php
-    $timeStampH = gmdate("H");
-    $timeStampM = gmdate("i");
-    $timeStampH = $timeStampH+2;
+    date_default_timezone_set("Europe/Brussels");
 
-    if ($timeStampH >=5 AND ($timeStampH < 9 or ($timeStampM == 9 AND $timeStampM == 0))){
+    $timeStampH = date("H");
+    $timeStampM = date("i");
+
+    if ($timeStampH >=5 AND ($timeStampH < 9 OR ($timeStampM == 9 AND $timeStampM == 0))){
         echo "Good morning !";
     } else if ($timeStampH >= 9 AND $timeStampH < 12 AND $timeStampM > 0){
         echo "Good day !";
